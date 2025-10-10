@@ -1,0 +1,105 @@
+:root{
+    --AzulEsverdiado: darkcyan;
+    --AzulEsverdiadoEvento: rgb(0, 98, 98 );
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#login{
+    border: 1px gray solid;
+    width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+}
+h3{
+    margin: 25px;
+    text-align: center;
+    color: var(--AzulEsverdiado);
+    transition: 1s all ease;
+}
+h3:hover{
+    transform: scale(1.05);     
+}
+h3::after{
+    content: "";
+    display: block;
+    width: 0px;
+    height: 3px;
+    background-color: var(--AzulEsverdiado);
+    margin: 8px auto 0 auto; 
+    border-radius: 2px;
+    transition: 0.5s all ease-in-out;
+}
+h3:hover::after{
+    width: 100px;
+    height: 2px;
+    transition: 0.5s all ease-in-out;
+}
+img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+img:hover{
+    transform: scale(1.10); 
+    transition: 1s all ease;
+}
+label{
+    display: block;
+    width: 80%;
+    margin: 10px auto; 
+    opacity: 0.5;
+}
+input{  
+    width: 100%;
+}
+a{
+    font-size: small;
+    margin: 10px auto;
+    display: block;
+    width: 80%;
+    text-align: end;
+    opacity: 0.8;
+}
+a:hover{
+    transform: scale(1.01); 
+    transition: 1s all ease;
+}
+#botoes{
+    width: 100%;
+    text-align: center;
+}
+
+#botaoDesativado{
+    margin: 14px auto;
+    padding: 5px;
+    width: 80%;
+    border: none;
+    background-color: var(--AzulEsverdiado);
+    color: white;
+    border-radius: 10px;
+    transition: 0.8s;
+}
+#botaoDesativado:hover{
+    transform: scale(1.05); 
+    transition: 1s all ease;
+}
+#botaoAtivado{
+    margin: 14px auto;
+    padding: 5px;
+    width: 80%;
+    border: none;
+    background-color: var(--AzulEsverdiadoEvento);
+    color: white;
+    border-radius: 10px;
+    transition: 0.8s;
+}
+#botaoAtivado:hover{
+    transition: 1s all ease;
+}
