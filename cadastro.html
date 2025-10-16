@@ -8,7 +8,30 @@
     <title>Cadastro</title>
 </head>
 <body>
-    
+    <section>
+        <form id="Cadastro">
+        <h3>APS - Lógica Matemática</h3>
+        <h4>Cadastro</h4>
+        <img src="image/FotoUsuario.jpg" alt="Foto do Usuário" id="fotoUsuario">
+        <label for="nome">Nome Completo<br><input type="text" id="nome" placeholder="Digite seu Nome Completo..."></label>
+        <label for="data">Data de Nascimento<br><input type="date" id="data" placeholder="DD/MM/AAAA..."></label>
+        <label for="email">Email<br><input type="text" id="email" placeholder="Digite o seu email..."></label>
+        <label for="confimaremail">Confirmar Email<br><input type="text" id="confirmarEmail" placeholder="Confirme seu email..."></label>
+        <div id="mensagemErro">
+            <p class="textoErro" id="textoErroEmail"></p>
+        </div>
+        <label for="senha">Senha<br><input type="password" id="senha" placeholder="Digite a sua senha..."></label>
+        <label for="confimarsenha">Confirmar Senha<br><input type="password" id="confirmarSenha" placeholder="Confirme sua senha..."></label>
+        <div id="mensagemErro">
+            <p class="textoErro" id="textoErroSenha"></p>
+        </div>
+        <p id="fraseLogin">Ja possui cadastro? <a href="index.html">Entrar</Logue-se></a></p>
+
+        <div id="botoes">
+            <button id="botaoBloqueado">Criar Cadastro</button>
+        </div>
+        </form>
+    </section>
 </body>
 <script src="scripts/cadastro.js"></script>
 </html>
