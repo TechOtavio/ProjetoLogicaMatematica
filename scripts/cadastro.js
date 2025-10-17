@@ -104,7 +104,7 @@ inputConfirmarSenha.addEventListener('change', (event) => {
     }
 })
 
-document.addEventListener('change', (event) => {
+document.addEventListener('change', () => {
     if(nome && idade && email && confirmarEmail && senha && confirmarSenha){
         botao.id = 'botaoDesativado';
     }else{
@@ -127,11 +127,11 @@ botao.addEventListener('click', (event) => {
         PessoaObjeto.idade = idade;
         PessoaObjeto.email = email;
         PessoaObjeto.senha = senha;
-        localStorage.setItem(1, JSON.stringify(PessoaObjeto));    
+        localStorage.setItem(window.localStorage.length + 1, JSON.stringify(PessoaObjeto));    
 
         setTimeout(() => {
             window.location.href = 'cadastrado.html'
-        }, 10000);
+        }, 3000);
     }else{
         
     }

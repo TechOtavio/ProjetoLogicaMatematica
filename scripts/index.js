@@ -5,6 +5,7 @@ let pErro = document.getElementById('textoErro')
 
 let email = (JSON.parse(localStorage.getItem(1))).email;
 let senha = (JSON.parse(localStorage.getItem(1))).senha;
+console.log(window.localStorage.length)
 
 let valorInputEmail;
 let valorInputSenha;
@@ -36,8 +37,7 @@ botao.addEventListener('click', (event) => {
         pErro.textContent = `Credenciamento inválido, cadastre-se ou tente novamente!`
     }
 
-
     setTimeout(() => {
-            window.location.href = 'cadastrado.html'
+            window.location.href = 'logado.html'
         }, 2000);
 })
