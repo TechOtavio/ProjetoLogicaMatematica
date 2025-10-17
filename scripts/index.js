@@ -3,10 +3,12 @@ let inputSenha = document.getElementById('senha')
 let botao = document.getElementById('botaoAtivado') || document.getElementById('botaoDesativado');
 let pErro = document.getElementById('textoErro')
 
-let email = '';
-let senha = '';
+let email = (JSON.parse(localStorage.getItem(1))).email;
+let senha = (JSON.parse(localStorage.getItem(1))).senha;
+
 let valorInputEmail;
 let valorInputSenha;
+
 let estadoBotao = false;
 
 
@@ -33,4 +35,9 @@ botao.addEventListener('click', (event) => {
     if(valorInputEmail != email || valorInputSenha != senha){
         pErro.textContent = `Credenciamento inválido, cadastre-se ou tente novamente!`
     }
+
+
+    setTimeout(() => {
+            window.location.href = 'cadastrado.html'
+        }, 2000);
 })

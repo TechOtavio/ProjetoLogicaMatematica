@@ -122,5 +122,17 @@ botao.addEventListener('click', (event) => {
         estadoBotao = true;
     }
 
+    if(nome && idade && email && confirmarEmail && senha && confirmarSenha){
+        PessoaObjeto.nome = nome;
+        PessoaObjeto.idade = idade;
+        PessoaObjeto.email = email;
+        PessoaObjeto.senha = senha;
+        localStorage.setItem(1, JSON.stringify(PessoaObjeto));    
 
+        setTimeout(() => {
+            window.location.href = 'cadastrado.html'
+        }, 10000);
+    }else{
+        
+    }
 })
