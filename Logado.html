@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conjunção Filmes</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #222;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+        }
+        nav a:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+        main {
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .secao-filmes {
+            margin-bottom: 2rem;
+        }
+        .secao-filmes h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 0.5rem;
+        }
+        .lista-filmes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        .cartao-filme {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 200px;
+            overflow: hidden;
+        }
+        .cartao-filme img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .cartao-filme-info {
+            padding: 1rem;
+        }
+        .cartao-filme-info h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+        .cartao-filme-info p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>APS Filmes</h1>
+    </header>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#lancamentos">Lançamentos</a>
+        <a href="#em-alta">Em Alta</a>
+        <a href="#generos">Gêneros</a>
+    </nav>
+
+    <main>
+        
+        <section id="lancamentos" class="secao-filmes">
+            <h2>Clássicos</h2>
+            
+            <div class="lista-filmes">
+                
+                <article class="cartao-filme">
+                    <img src="https://media.fstatic.com/IGdxgFFpKcNVlfXGu2bI-FoxtFU=/322x478/smart/filters:format(webp)/media/movies/covers/2011/06/bd411bafd22ae250bb2618a07cf787e8.jpg" alt="Pôster do Filme 1">
+                    <div class="cartao-filme-info">
+                        <h3>V de Vingança</h3>
+                        <p>Ano: 2005</p>
+                        <p>Gênero: Ação</p>
+                    </div>
+                </article>
+
+                <article class="cartao-filme">
+                    <img src="https://imgs.search.brave.com/5q9opAdQOr9yicAdEt3UlLi5-_84BTKD0sDRLK4hy3k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QlpUTTJZemhs/T1dRdFpXUTVNaTAw/WkRZeExUaGhOVFF0/TmpVeVpHWTJaRFZr/T0dGaVhrRXlYa0Zx/Y0djQC5qcGc" alt="Pôster do Filme 2">
+                    <div class="cartao-filme-info">
+                        <h3>Van Helsing</h3>
+                        <p>Ano: 2004</p>
+                        <p>Gênero: Ação/Ficção Científica</p>
+                    </div>
+                </article>
+
+                <article class="cartao-filme">
+                    <img src="https://cinema10.com.br/upload/filmes/filmes_2492_poster2venom.jpg?default=poster" alt="Pôster do Filme 3">
+                    <div class="cartao-filme-info">
+                        <h3>Venom</h3>
+                        <p>Ano: 2018</p>
+                        <p>Gênero: Ação</p>
+                    </div>
+                </article>
+
+                </div>
+        </section>
+
+        <section id="em-alta" class="secao-filmes">
+            <h2>Em Alta</h2>
+            
+            <div class="lista-filmes">
+                
+                <article class="cartao-filme">
+                    <img src="https://i.ibb.co/HpDf92Jh/Silvio.jpg" alt="Pôster do Filme 4">
+                    <div class="cartao-filme-info">
+                        <h3>Alpha GO</h3>
+                        <p>Ano: 2017</p>
+                        <p>Gênero: Ficção Científica</p>
+                    </div>
+                </article>
+
+                <article class="cartao-filme">
+                    <img src="https://via.placeholder.com/200x300.png?text=Pôster+Filme+5" alt="Pôster do Filme 5">
+                    <div class="cartao-filme-info">
+                        <h3>Título do Filme 5</h3>
+                        <p>Ano: 2024</p>
+                        <p>Gênero: Suspense</p>
+                    </div>
+                </article>
+                
+                </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 APS Lógica Matemática ©. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
