@@ -35,9 +35,9 @@ botao.addEventListener('click', (event) => {
 
     if(valorInputEmail != email || valorInputSenha != senha){
         pErro.textContent = `Credenciamento inválido, cadastre-se ou tente novamente!`
-    }
-
-    setTimeout(() => {
-            window.location.href = 'logado.html'
+    }else{
+        setTimeout(() => {
+            window.location.href = 'inicio.html'
         }, 2000);
+    }
 })
