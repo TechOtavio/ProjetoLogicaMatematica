@@ -3,30 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Filmes Clássicos</title>
+    <link rel="shortcut icon" href="/image/Favicon2.0.jpg" type="image/x-icon">
+    <title>Filmes - Catálogo</title>
 
     <style>
         body {
             font-family: Arial, sans-serif; 
-            background-color: #232323;    
+            background-color: #f0f0f0; 
             margin: 0;
             padding: 0;
+            color: #333;
         }
 
         header {
-            background-color: #222; 
-            color: #fff;             
+            background-color: #1a1a1a;
+            color: #ffffff;
+            height: 100px;
             padding: 20px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
         }
 
     
-        h1 {
-            margin-bottom: 20px; 
+        header h1 {
+            font-size: 2.2rem;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        header h1 span {
+            display: inline-block;
+            max-width: 0;
+            opacity: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            vertical-align: bottom;
+            transition: max-width 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 1s ease 0.3s;
+        }
+
+        header h1:hover span {
+            max-width: 500px;
+            opacity: 1;
         }
         
         nav {
-            background-color: #3b3b3b;
+            background-color: #333333;
             display: flex;          
             justify-content: center;
             gap: 30px;              
@@ -34,7 +59,7 @@
         }
 
         nav a {
-            color: #ededed;             
+            color: #ffffff;            
             text-decoration: none;    
             font-weight: bold;
             padding: 5px 10px;
@@ -42,25 +67,32 @@
         }
 
         nav a:hover {
-            color: #c6c6c6;
+            color: #cccccc;
         }
 
         
         .catalogo-filmes {
-            display: flex;         
+            display: flex;        
             overflow-x: auto;     
-            overflow-y: hidden;    
-            padding: 10px;         
+            overflow-y: hidden;   
+            padding: 10px;        
         }
         
         .filme-item {
-            background-color: #ffffff; 
-            border: 1px solid #ffffff;     
-            border-radius: 8px;         
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;    
+            border-radius: 8px;        
             margin: 10px; 
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
             flex: 0 0 320px; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .filme-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
         }
         
         .filme-item img {
@@ -72,7 +104,7 @@
         }
 
         .filme-item h2 {
-            color: #333;
+            color: #1a1a1a;
             text-align: center;
             min-height: 50px;
         }
@@ -81,42 +113,68 @@
         .filme-item p {
             min-height: 100px; 
             font-size: 0.9em;
-            color: #555;
+            color: #555555;
         }
 
-    
+        .filme-detalhes {
+            margin: 15px 0 0 0;
+            padding: 0;
+            font-size: 0.9em;
+            color: #555555;
+        }
 
+        .filme-detalhes div {
+            margin-bottom: 5px;
+        }
+        
+        .filme-detalhes dt {
+            display: inline;
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+        
+        .filme-detalhes dd {
+            display: inline;
+            margin-left: 5px;
+        }
+        
         footer {
             text-align: center;
             padding: 20px;
             margin-top: 30px;
-            color: #777;
+            background-color: #1a1a1a;
+            color: #cccccc;
         }
     </style>
     </head>
 <body>
 
     <header>
-        <h1>APS Filmes</h1>
-        
-                <nav>
-            <a href="#">Início</a> 
-            <a href="#">Catálogo</a> 
-            <a href="#">Surpresa</a>
-        </nav>
+        <h1>APS <span>- Lógica de programação</span></h1>
     </header>
+    <nav>
+        <a href="/inicio.html">Início</a> 
+        <a href="/catalogo.html">Catálogo</a> 
+        <a href="/surpresa.html">Surpresa</a>
+    </nav>
 
     <main>
-                <section class="catalogo-filmes">
+              <section class="catalogo-filmes">
             
             <article class="filme-item">
                 <img src="imgCatalogo/Longlegs.jpg" alt="Pôster do filme Longlegs - Vínculo Mortal">
                 <h2>Longlegs - Vínculo Mortal (2024)</h2>
                 <p>Uma nova e talentosa agente do FBI que é designada para um caso arquivado e complexo de um serial killer.</p>
-                <ul>
-                    <li><strong>Diretor:</strong> </li>
-                    <li><strong>Gênero:</strong> Terror, Suspense.</li>
-                </ul>
+                <dl class="filme-detalhes">
+                    <div>
+                        <dt>Diretor:</dt>
+                        <dd></dd>
+                    </div>
+                    <div>
+                        <dt>Gênero:</dt>
+                        <dd>Terror, Suspense.</dd>
+                    </div>
+                </dl>
             </article>
             
             
@@ -124,105 +182,177 @@
                 <img src="imgCatalogo/VdeVingançaMelhor.jpg" alt="Pôster do filme V de Vingança">
                 <h2>V de Vingança (2006)</h2>
                 <p>Em um futuro distópico, um vigilante mascarado conhecido como "V" luta contra um governo totalitário na Grã-Bretanha, contando com a ajuda de uma jovem chamada Evey.</p>
-                <ul>
-                    <li><strong>Diretor:</strong> James McTeigue</li>
-                    <li><strong>Gênero:</strong> Ação, Ficção Científica, Suspense.</li>
-                </ul>
+                <dl class="filme-detalhes">
+                    <div>
+                        <dt>Diretor:</dt>
+                        <dd>James McTeigue</dd>
+                    </div>
+                    <div>
+                        <dt>Gênero:</dt>
+                        <dd>Ação, Ficção Científica, Suspense.</dd>
+                    </div>
+                </dl>
             </article>
 
             <article class="filme-item">
                 <img src="imgCatalogo/VanHelsing.jpg" alt="Pôster do filme Van Helsing">
                 <h2>Van Helsing (2004)</h2>
                 <p>O lendário caçador de monstros, Gabriel Van Helsing, é enviado à Transilvânia para deter o Conde Drácula, que usa as pesquisas de Dr. Frankenstein para seus planos.</p>
-                <ul>
-                    <li><strong>Diretor:</strong> Stephen Sommers</li>
-                    <li><strong>Gênero:</strong> Ação, Aventura, Fantasia.</li>
-
-                </ul>
+                <dl class="filme-detalhes">
+                    <div>
+                        <dt>Diretor:</dt>
+                        <dd>Stephen Sommers</dd>
+                    </div>
+                    <div>
+                        <dt>Gênero:</dt>
+                        <dd>Ação, Aventura, Fantasia.</dd>
+                    </div>
+                </dl>
             </article>
 
             <article class="filme-item">
                 <img src="imgCatalogo/Venom.jpg" alt="Pôster do filme Venom">
                 <h2>Venom (2018)</h2>
                 <p>O jornalista Eddie Brock se torna o hospedeiro de um simbionte alienígena, Venom, que lhe concede superpoderes. Juntos, eles precisam combater uma ameaça maior.</p>
-                <ul>
-                    <li><strong>Diretor:</strong> Ruben Fleischer</li>
-                    <li><strong>Gênero:</strong> Ação, Ficção Científica, Super-herói.</li>
-                </ul>
+                <dl class="filme-detalhes">
+                    <div>
+                        <dt>Diretor:</dt>
+                        <dd>Ruben Fleischer</dd>
+                    </div>
+                    <div>
+                        <dt>Gênero:</dt>
+                        <dd>Ação, Ficção Científica, Super-herói.</dd>
+                    </div>
+                </dl>
             </article>
             
             <article class="filme-item">
                 <img src="imgCatalogo/OpoderosoChefao.jpg" alt="Pôster do filme O Poderoso Chefão">
                 <h2>O Poderoso Chefão (1972)</h2>
                 <p>A saga de uma família mafiosa italiana em Nova York, focada na ascensão de Michael Corleone ao poder.</p>
-                <ul>
-                    <li><strong>Diretor:</strong> Francis Ford Coppola</li>
-                    <li><strong>Gênero:</strong> Crime, Drama</li>
-                </ul>
+                <dl class="filme-detalhes">
+                    <div>
+                        <dt>Diretor:</dt>
+                        <dd>Francis Ford Coppola</dd>
+                    </div>
+                    <div>
+                        <dt>Gênero:</dt>
+                        <dd>Crime, Drama</dd>
+                    </div>
+                </dl>
             </article>
 
             <article class="filme-item">
                 <img src="imgCatalogo/CASABLANCA.jpg" alt="Pôster do filme Casablanca">
                 <h2>Casablanca (1942)</h2>
                 <p>Um exilado americano dono de um bar em Marrocos precisa decidir se ajuda sua antiga paixão e o marido dela a fugirem dos nazistas.</p>
-                <ul>
-                    <li><strong>Diretor:</strong> Michael Curtiz</li>
-                    <li><strong>Gênero:</strong> Romance, Drama, Guerra.</li>
-                </ul>
+                <dl class="filme-detalhes">
+                    <div>
+                        <dt>Diretor:</dt>
+                        <dd>Michael Curtiz</dd>
+                    </div>
+                    <div>
+                        <dt>Gênero:</dt>
+                        <dd>Romance, Drama, Guerra.</dd>
+                    </div>
+                </dl>
             </article>
 
             <article class="filme-item">
                 <img src="imgCatalogo/2001UmaOdisseianoEspaco(1968).jpg" alt="Pôster do filme 2001: Uma Odisseia no Espaço">
                 <h2>2001: Uma Odisseia no Espaço (1968)</h2>
                 <p>Uma jornada épica da humanidade, desde suas origens até a exploração espacial, guiada por um misterioso monolito negro.</p>
-                <ul>
-                    <li><strong>Diretor:</strong> Stanley Kubrick</li>
-                    <li><strong>Gênero:</strong> Ficção Científica, Aventura.</li>
+                <dl class="filme-detalhes">
+                    <div>
+                        <dt>Diretor:</dt>
+                        <dd>Stanley Kubrick</dd>
+                    </div>
+                    <div>
+                        <dt>Gênero:</dt>
+                        <dd>Ficção Científica, Aventura.</dd>
+                    </div>
+                </dl>
             </article>
 
             <article class="filme-item">
                 <img src="imgCatalogo/CidadãoKane(1941).jpg" alt="Pôster do filme Cidadão Kane">
                 <h2>Cidadão Kane (1941)</h2>
                 <p>Após a morte de um magnata da imprensa, repórteres investigam sua vida tumultuada para entender o significado de sua última palavra: "Rosebud".</p>
-                <ul>
-                    <li><strong>Diretor:</strong> Orson Welles</li>
-                    <li><strong>Gênero:</strong> Mistério, Drama.</li>
-                </ul>
+                <dl class="filme-detalhes">
+                    <div>
+                        <dt>Diretor:</dt>
+                        <dd>Orson Welles</dd>
+                    </div>
+                    <div>
+                        <dt>Gênero:</dt>
+                        <dd>Mistério, Drama.</dd>
+                    </div>
+                </dl>
             </article>
 
             <article class="filme-item">
                 <img src="imgCatalogo/Psicose(1960).jpg" alt="Pôster do filme Psicose">
                 <h2>Psicose (1960)</h2>
                 <p>Uma secretária rouba 40 mil dólares e foge, parando em um motel isolado gerenciado por um jovem perturbado, Norman Bates.</p>
-                <ul>
-                    <li><strong>Diretor:</strong> Alfred Hitchcock</li>
-                    <li><strong>Gênero:</strong> Terror, Suspense.</li>
-                </ul>
+                <dl class="filme-detalhes">
+                    <div>
+                        <dt>Diretor:</dt>
+                        <dd>Alfred Hitchcock</dd>
+                    </div>
+                    <div>
+                        <dt>Gênero:</dt>
+                        <dd>Terror, Suspense.</dd>
+                    </div>
+                </dl>
             </article>
 
             <article class="filme-item">
                 <img src="imgCatalogo/StarWarsUmaNovaEsperança(1977).jpg" alt="Pôster do filme Star Wars: Uma Nova Esperança">
                 <h2>Star Wars: Uma Nova Esperança (1977)</h2>
                 <p>Luke Skywalker se junta a um cavaleiro Jedi, um piloto arrogante e dois dróides para salvar a galáxia do Império e resgatar a Princesa Leia.</p>
-                <ul>
-                    <li><strong>Diretor:</strong> George Lucas</li>
-                    <li><strong>Gênero:</strong> Ficção Científica, Aventura.</li>
-                </ul>
+                <dl class="filme-detalhes">
+                    <div>
+                        <dt>Diretor:</dt>
+                        <dd>George Lucas</dd>
+                    </div>
+                    <div>
+                        <dt>Gênero:</dt>
+                        <dd>Ficção Científica, Aventura.</dd>
+                    </div>
+                </dl>
             </article>
 
              <article class="filme-item">
                 <img src="imgCatalogo/Silvio.jpg" alt="Pôster do filme O Homem que Fingia Saber os Livros Dos Alunos">
                 <h2>O Homem que Fingia Saber os Livros Dos Alunos(2025)</h2>
                 <p>"Silvio Rodrigues, professor da universidade Unifametro, observava os livros em cima da carteira dos alunos para que pudesse decorar um pedaço e parecer super inteligente.</p>
-                <ul>
-                    <li><strong>Diretor:</strong> Autor Desconhecido</li>
-                    <li><strong>Gênero:</strong> Ficção Científica, Aventura, Drama, Mistério, Violência, Ação.</li>
-                </ul>
+                <dl class="filme-detalhes">
+                    <div>
+                        <dt>Diretor:</dt>
+                        <dd>Autor Desconhecido</dd>
+                    </div>
+                    <div>
+                        <dt>Gênero:</dt>
+                        <dd>Ficção Científica, Aventura, Drama, Mistério, Violência, Ação.</dd>
+                    </div>
+                </dl>
             </article>
 
             <article class="filme-item">
                 <img src="imgCatalogo/PulpFictionTempodeViolência(1994).jpg" alt="Pôster do filme Pulp Fiction: Tempo de Violência">
                 <h2>Pulp Fiction: Tempo de Violência (1994)</h2>
                 <p>As vidas de dois assassinos de aluguel, um boxeador, a esposa de um gângster e um casal de assaltantes se entrelaçam em uma história de violência e redenção.</p>
-                <ul>
-                    <li><strong>Diretor:</strong> Quentin Tarantino</li>
+                <dl class="filme-detalhes">
+                    <div>
+                        <dt>Diretor:</dt>
+                        <dd>Quentin Tarantino</dd>
+                    </div>
+                </dl>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 APS Lógica Matemática ©. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

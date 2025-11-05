@@ -3,36 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conjunção Filmes</title>
+    <link rel="shortcut icon" href="/image/Favicon2.0.jpg" type="image/x-icon">
+    <title>Filmes - Início</title>
     
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f0f0;
             color: #333;
         }
         header {
-            background-color: #222;
-            color: white;
-            padding: 1rem;
-            text-align: center;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 20px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
         }
+        
+        header h1 {
+            font-size: 2.2rem;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        header h1 span {
+            display: inline-block;
+            max-width: 0;
+            opacity: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            vertical-align: bottom;
+            transition: max-width 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 1s ease 0.3s;
+        }
+
+        header h1:hover span {
+            max-width: 500px;
+            opacity: 1;
+        }
+        
         nav {
-            background-color: #333;
-            padding: 0.5rem;
-            text-align: center;
+            background-color: #333333;
+            display: flex;          
+            justify-content: center;
+            gap: 30px;              
+            padding: 10px 0;
         }
+
         nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            margin: 0 0.5rem;
+            color: #ffffff;            
+            text-decoration: none;    
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: color 0.3s;
         }
+
         nav a:hover {
-            background-color: #555;
-            border-radius: 4px;
+            color: #cccccc;
         }
         main {
             padding: 1rem;
@@ -43,8 +76,9 @@
             margin-bottom: 2rem;
         }
         .secao-filmes h2 {
-            border-bottom: 2px solid #ccc;
+            border-bottom: 2px solid #333333;
             padding-bottom: 0.5rem;
+            color: #1a1a1a;
         }
         .lista-filmes {
             display: flex;
@@ -53,13 +87,22 @@
             justify-content: center;
         }
         .cartao-filme {
-            background-color: white;
-            border: 1px solid #ddd;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            padding: 10px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             width: 200px;
             overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .cartao-filme:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
         .cartao-filme img {
             width: 100%;
             height: 300px;
@@ -71,14 +114,15 @@
         .cartao-filme-info h3 {
             margin-top: 0;
             font-size: 1.1rem;
+            color: #1a1a1a;
         }
         .cartao-filme-info p {
             font-size: 0.9rem;
-            color: #666;
+            color: #555555;
         }
         footer {
-            background-color: #222;
-            color: white;
+            background-color: #1a1a1a;
+            color: #cccccc;
             text-align: center;
             padding: 1rem;
             margin-top: 2rem;
@@ -88,7 +132,7 @@
 <body>
 
     <header>
-        <h1>APS Filmes</h1>
+        <h1>APS <span>- Lógica de programação</span></h1>
     </header>
 
     <nav>
@@ -131,7 +175,7 @@
                     </div>
                 </article>
 
-                </div>
+            </div>
         </section>
 
         <section id="em-alta" class="secao-filmes">
@@ -148,27 +192,27 @@
                 </article>
 
 
-                <div class="lista-filmes">
-                 <article class="cartao-filme">
-                    <img src="imgCatalogo/Venom.jpg" alt="Pôster do Filme 3">
-                    <div class="cartao-filme-info">
-                        <h3>Venom</h3>
-                        <p>Ano: 2018</p>
-                        <p>Gênero: Ação, Ficção Científica, Super-herói</p>
-                    
-                    </div>
-                </article>
+                 <div class="lista-filmes">
+                     <article class="cartao-filme">
+                        <img src="imgCatalogo/Venom.jpg" alt="Pôster do Filme 3">
+                        <div class="cartao-filme-info">
+                            <h3>Venom</h3>
+                            <p>Ano: 2018</p>
+                            <p>Gênero: Ação, Ficção Científica, Super-herói</p>
+                        
+                        </div>
+                    </article>
 
-                <div class="lista-filmes">
-                 <article class="cartao-filme">
-                    <img src="imgCatalogo/Longlegs.jpg" alt="Pôster do Filme 3">
-                    <div class="cartao-filme-info">
-                        <h3>Longlegs - Vínculo Mortal</h3>
-                        <p>Ano: 2024</p>
-                        <p>Gênero: Terror, Suspense, Drama</p>
-                    
-                    </div>
-                </article>
+                 <div class="lista-filmes">
+                     <article class="cartao-filme">
+                        <img src="imgCatalogo/Longlegs.jpg" alt="Pôster do Filme 3">
+                        <div class="cartao-filme-info">
+                            <h3>Longlegs - Vínculo Mortal</h3>
+                            <p>Ano: 2024</p>
+                            <p>Gênero: Terror, Suspense, Drama</p>
+                        
+                        </div>
+                    </article>
 
 
                 </div>
