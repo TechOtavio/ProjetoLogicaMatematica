@@ -1,180 +1,171 @@
-:root{
+:root {
     --AzulEsverdiado: darkcyan;
-    --AzulEsverdiadoEvento: rgb(0, 98, 98 );
+    --AzulEsverdiadoEvento: rgb(0, 98, 98);
 }
 
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-}
-
-#Cadastro{
+#Cadastro {
     border: 1px gray solid;
-    width: 400px;
-    margin: 0 auto;
+    width: 40rem;
+    max-width: 90%;
+    margin: 0 auto;    
     background-color: white;
-    border-radius: 10px;
+    border-radius: 1rem; /* 10px */
 }
 
-h3{
-    height: 10px;
-    margin: 25px;
+h3 {
+    height: 1rem; /* 10px */
+    margin: 2.5rem; /* 25px */
     text-align: center;
     color: var(--AzulEsverdiado);
     transition: 1s all ease;
+    font-size: 2.4rem; /* 24px */
 }
 
-h3:hover{
-    transform: scale(1.05);     
+h3:hover {
+    transform: scale(1.05);   
 }
 
-h3::after{
+h3::after {
     content: "";
     display: block;
-    width: 0px;
-    height: 3px;
+    width: 0;
+    height: 0.3rem; /* 3px */
     background-color: var(--AzulEsverdiado);
-    margin: 8px auto 0 auto; 
-    border-radius: 2px;
+    margin: 0.8rem auto 0 auto; /* 8px */
+    border-radius: 0.2rem; /* 2px */
     transition: 0.5s all ease-in-out;
 }
 
-h3:hover::after{
-    width: 100px;
-    height: 2px;
+h3:hover::after {
+    width: 10rem; /* 100px */
+    height: 0.2rem; /* 2px */
     transition: 0.5s all ease-in-out;
 }
 
 h4 {
-    height: 10px;
-    margin: 25px;
+    height: 1rem; /* 10px */
+    margin: 2.5rem; /* 25px */
     text-align: center;
     color: var(--AzulEsverdiado);
     transition: 1s all ease;
+    font-size: 2rem; /* 20px */
 }
 
-h4:hover{
+h4:hover {
     transform: scale(1.05);  
 }
 
-h4::after{
+h4::after {
      content: "";
     display: block;
-    width: 0px;
-    height: 3px;
+    width: 0;
+    height: 0.3rem; /* 3px */
     background-color: var(--AzulEsverdiado);
-    margin: 8px auto 0 auto; 
-    border-radius: 2px;
+    margin: 0.8rem auto 0 auto; /* 8px */
+    border-radius: 0.2rem; /* 2px */
     transition: 0.5s all ease-in-out;
 }
 
-h4:hover::after{
-     width: 75px;
-    height: 2px;
+h4:hover::after {
+     width: 7.5rem; /* 75px */
+    height: 0.2rem; /* 2px */
     transition: 0.5s all ease-in-out;
 }
 
-#fotoUsuario{
-    width: 100px;
-    height: 100px;
+#fotoUsuario {
+    width: 10rem; /* 100px */
+    height: 10rem; /* 100px */
     display: block;
     margin: 0 auto;
 }
 
-img:hover{
+img:hover {
     transform: scale(1.10); 
     transition: 1s all ease;
 }
 
-label{
+label {
     display: block;
     width: 80%;
-    margin: 10px auto; 
+    margin: 1rem auto; /* 10px */
     opacity: 0.5;
 }
-input{  
+input {   
     width: 100%;
 }
 
-#fraseLogin{
+#fraseLogin {
     width: 80%;
     margin: 0 auto;
-    font-size: 10px;
+    font-size: 1.2rem; /* 12px */
     opacity: 0.8;
     text-align: end;
 }
 
-a{
+a {
     width: 20%;
-    margin: 10px auto;
-    font-size: 10px;
+    margin: 1rem auto; /* 10px */
+    font-size: 1.2rem; /* 12px */
     text-align: end;
     opacity: 0.8;
 }
 
-#botoes{
+#botoes {
     width: 100%;
     text-align: center;
 }
-#botaoBloqueado{
-    margin: 14px auto;
-    padding: 5px;
+
+/* Estilos base para TODOS os botões */
+#botaoBloqueado,
+#botaoDesativado,
+#botaoAtivado {
+    margin: 1.4rem auto; /* 14px */
+    padding: 1rem; /* 10px */
     width: 80%;
     border: none;
-    background-color: rgb(150, 149, 149);
     color: white;
-    border-radius: 10px;
+    border-radius: 1rem; /* 10px */
     transition: 0.8s;
+}
+
+/* Estilos específicos */
+#botaoBloqueado {
+    background-color: rgb(150, 149, 149);
     pointer-events: none;
 }
 
-#botaoDesativado{
-    margin: 14px auto;
-    padding: 5px;
-    width: 80%;
-    border: none;
+#botaoDesativado {
     background-color: var(--AzulEsverdiado);
-    color: white;
-    border-radius: 10px;
-    transition: 0.8s;
+    cursor: pointer;
 }
 
-#botaoDesativado:hover{
+#botaoDesativado:hover {
     transform: scale(1.05); 
     transition: 1s all ease;
 }
 
-#botaoAtivado{
-    margin: 14px auto;
-    padding: 5px;
-    width: 80%;
-    border: none;
+#botaoAtivado {
     background-color: var(--AzulEsverdiadoEvento);
-    color: white;
-    border-radius: 10px;
-    transition: 0.8s;
+    cursor: pointer;
 }
 
-#botaoAtivado:hover{
+#botaoAtivado:hover {
     transition: 1s all ease;
 }
 
-#mensagemErro{
+#mensagemErro {
     width: 80%;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 1rem auto;
+    min-height: 2rem; 
 }
 
-.textoErro{
+.textoErro {
     margin: 0;
-    font-size: 10px;
+    font-size: 1.4rem;
     color: crimson;
 }
 
-#Verificado{
-    width: 25px;
-    height: 25px;
+#Verificado {
+    width: 2.5rem;
+    height: 2.5rem; 
 }
-

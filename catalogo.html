@@ -7,19 +7,24 @@
     <title>Filmes - Catálogo</title>
 
     <style>
+        html {
+            font-size: 62.5%;
+        }
+
         body {
             font-family: Arial, sans-serif; 
             background-color: #f0f0f0; 
             margin: 0;
             padding: 0;
             color: #333;
+            font-size: 1.6rem;
         }
 
         header {
             background-color: #1a1a1a;
             color: #ffffff;
-            height: 100px;
-            padding: 20px;
+            height: 10rem; 
+            padding: 2rem; 
             display: flex;
             align-items: center;
             justify-content: center;
@@ -28,7 +33,7 @@
 
     
         header h1 {
-            font-size: 2.2rem;
+            font-size: 3.2rem; 
             margin: 0;
             padding: 0;
             display: inline-block;
@@ -46,7 +51,7 @@
         }
 
         header h1:hover span {
-            max-width: 500px;
+            max-width: 50rem; 
             opacity: 1;
         }
         
@@ -54,16 +59,17 @@
             background-color: #333333;
             display: flex;          
             justify-content: center;
-            gap: 30px;              
-            padding: 10px 0;
-        }
+            gap: 3rem;              
+            padding: 1rem 0; 
+            }
 
         nav a {
             color: #ffffff;            
             text-decoration: none;    
             font-weight: bold;
-            padding: 5px 10px;
+            padding: 0.5rem 1rem; 
             transition: color 0.3s;
+            font-size: 1.6rem; 
         }
 
         nav a:hover {
@@ -75,56 +81,57 @@
             display: flex;        
             overflow-x: auto;     
             overflow-y: hidden;   
-            padding: 10px;        
+            padding: 1rem;         
         }
         
         .filme-item {
             background-color: #ffffff;
-            border: 1px solid #e0e0e0;    
-            border-radius: 8px;        
-            margin: 10px; 
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-            flex: 0 0 320px; 
+            border: 1px solid #e0e0e0; 
+            border-radius: 0.8rem;        
+            margin: 1rem; 
+            padding: 2rem; 
+            box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1); 
+            flex: 0 0 32rem; 
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .filme-item:hover {
             transform: scale(1.03);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2); 
             cursor: pointer;
         }
         
         .filme-item img {
             max-width: 100%; 
             display: block;  
-            margin: 0 auto 15px; 
-            height: 450px;
+            margin: 0 auto 1.5rem; 
+            height: 45rem; 
             object-fit: cover; 
         }
 
         .filme-item h2 {
             color: #1a1a1a;
             text-align: center;
-            min-height: 50px;
+            min-height: 5rem; 
+            font-size: 2rem; 
         }
 
         
         .filme-item p {
-            min-height: 100px; 
-            font-size: 0.9em;
+            min-height: 10rem; 
+            font-size: 1.4rem; 
             color: #555555;
         }
 
         .filme-detalhes {
-            margin: 15px 0 0 0;
+            margin: 1.5rem 0 0 0;  
             padding: 0;
-            font-size: 0.9em;
+            font-size: 1.4rem;  
             color: #555555;
         }
 
         .filme-detalhes div {
-            margin-bottom: 5px;
+            margin-bottom: 0.5rem; 
         }
         
         .filme-detalhes dt {
@@ -135,15 +142,16 @@
         
         .filme-detalhes dd {
             display: inline;
-            margin-left: 5px;
+            margin-left: 0.5rem; 
         }
         
         footer {
             text-align: center;
-            padding: 20px;
-            margin-top: 30px;
+            padding: 2rem;  
+            margin-top: 3rem; 
             background-color: #1a1a1a;
             color: #cccccc;
+            font-size: 1.4rem; 
         }
     </style>
     </head>
@@ -153,8 +161,8 @@
         <h1>APS <span>- Lógica de programação</span></h1>
     </header>
     <nav>
-        <a href="inicio.html">Início</a>
-        <a href="catalogo.html">Catálogo</a>
+        <a href="inicio.html">Início</a> 
+        <a href="catalogo.html">Catálogo</a> 
         <a href="surpresa.html">Surpresa</a>
     </nav>
 
@@ -342,6 +350,7 @@
                 <img src="imgCatalogo/PulpFictionTempodeViolência(1994).jpg" alt="Pôster do filme Pulp Fiction: Tempo de Violência">
                 <h2>Pulp Fiction: Tempo de Violência (1994)</h2>
                 <p>As vidas de dois assassinos de aluguel, um boxeador, a esposa de um gângster e um casal de assaltantes se entrelaçam em uma história de violência e redenção.</p>
+
                 <dl class="filme-detalhes">
                     <div>
                         <dt>Diretor:</dt>

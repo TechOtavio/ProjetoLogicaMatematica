@@ -1,59 +1,54 @@
-:root{
+:root {
     --AzulEsverdiado: darkcyan;
 }
 
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-}
-
-#Cadastrado{
+#Cadastrado {
     border: 1px gray solid;
-    width: 400px;
+    width: 40rem; 
+    max-width: 90%; 
     margin: 0 auto;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 1rem; 
+    padding: 1.5rem; 
 }
 
-h2{
-    height: 20px;
-    margin: 30px;
+h2 {
+    height: 2rem; 
+    margin: 3rem; 
     text-align: center;
     color: var(--AzulEsverdiado);
     transition: 1s all ease;
+    font-size: 2.6rem; 
 }
 
-h2:hover{
-    transform: scale(1.05);     
+h2:hover {
+    transform: scale(1.05);   
 }
 
-h2::after{
+h2::after {
     content: "";
     display: block;
-    width: 0px;
-    height: 3px;
+    width: 0;
+    height: 0.3rem; 
     background-color: var(--AzulEsverdiado);
-    margin: 8px auto 0 auto; 
-    border-radius: 2px;
+    margin: 0.8rem auto 0 auto; 
+    border-radius: 0.2rem; 
     transition: 0.5s all ease-in-out;
 }
 
-h2:hover::after{
-    width: 100px;
-    height: 2px;
+h2:hover::after {
+    width: 10rem;
+    height: 0.2rem; 
     transition: 0.5s all ease-in-out;
 }
 
-input{  
+input {   
     width: 100%;
 }
 
-#fraseLogin{
+#fraseLogin {
     text-align: center;
     transition: 1s all ease;
+    font-size: 1.6rem; 
+    padding: 1rem 0; 
 }
-
-
